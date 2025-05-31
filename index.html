@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Mantra | Paisa Bolta Hai</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-indigo-100 shadow-md py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <img src="logo.jpg" alt="Money Mantra Logo" class="h-20 rounded-lg shadow" />
+      <nav class="space-x-4">
+        <a href="#about" class="hover:text-indigo-700 font-medium">About</a>
+        <a href="#services" class="hover:text-indigo-700 font-medium">Services</a>
+        <a href="#contact" class="hover:text-indigo-700 font-medium">Contact</a>
+        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition" onclick="openLoginModal()">Login</button>
+        <button class="bg-white text-indigo-700 border border-indigo-500 px-4 py-2 rounded-lg hover:bg-indigo-200 transition" onclick="openSignupModal()">Signup</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-pink-50">
+    <h1 class="text-5xl font-extrabold mb-4 text-indigo-700">Welcome to Money Mantra</h1>
+    <p class="text-lg mb-6 italic text-gray-700">"Paisa Bolta Hai" - Invest smartly with our expert trading solutions</p>
+    <a href="#plans" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold transition">Join Now</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-4 bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4 text-indigo-700">About Us</h2>
+      <p class="text-gray-700 text-lg">Money Mantra helps individuals invest and trade with confidence. We are committed to educating and empowering traders across India with the right tools, strategies, and support.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 px-4 bg-indigo-50">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-indigo-600">Trading Guidance</h3>
+        <p class="text-gray-700">Daily tips, trends and stock market updates tailored to your goals.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-indigo-600">Investment Plans</h3>
+        <p class="text-gray-700">Short, mid and long-term investment packages to grow your wealth.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-indigo-600">Client Support</h3>
+        <p class="text-gray-700">One-on-one consultation and community access for live assistance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-4 bg-pink-100">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4 text-indigo-700">Connect with Us</h2>
+      <p class="mb-2">📞 8989044618, 7771892475</p>
+      <p class="mb-4">💬 <a href="https://chat.whatsapp.com/GjJI1P7Jg454yBsmI8y6CC" class="text-pink-600 font-semibold underline">Join our WhatsApp Community</a></p>
+      <form class="bg-white p-6 rounded-lg shadow-lg space-y-4 text-left">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" />
+        <input type="email" placeholder="Your Email" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" />
+        <textarea placeholder="Your Message" rows="4" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+        <button type="submit" class="bg-pink-500 text-white w-full py-3 rounded hover:bg-pink-600 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-200 py-4 text-center text-sm text-indigo-800">
+    © 2025 Money Mantra. All rights reserved.
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-lg shadow-xl w-80">
+      <h2 class="text-xl font-bold mb-4 text-center text-indigo-700">Login</h2>
+      <input type="email" placeholder="Email" class="block w-full mb-3 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <input type="password" placeholder="Password" class="block w-full mb-3 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <button class="bg-indigo-600 text-white w-full py-2 rounded hover:bg-indigo-700 transition">Login</button>
+      <button onclick="closeLoginModal()" class="mt-3 w-full text-sm text-gray-500 hover:underline text-center">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signupModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-lg shadow-xl w-96">
+      <h2 class="text-xl font-bold mb-4 text-center text-indigo-700">Signup</h2>
+      <input type="text" placeholder="Full Name" class="block w-full mb-3 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" />
+      <input type="email" placeholder="Email" class="block w-full mb-3 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" />
+      <input type="password" placeholder="Password" class="block w-full mb-3 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" />
+      <input type="password" placeholder="Confirm Password" class="block w-full mb-4 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500" />
+      <button class="bg-pink-500 text-white w-full py-2 rounded hover:bg-pink-600 transition">Create Account</button>
+      <button onclick="closeSignupModal()" class="mt-3 w-full text-sm text-gray-500 hover:underline text-center">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Modal Scripts -->
+  <script>
+    function openLoginModal() {
+      document.getElementById('loginModal').classList.remove('hidden');
+    }
+    function closeLoginModal() {
+      document.getElementById('loginModal').classList.add('hidden');
+    }
+    function openSignupModal() {
+      document.getElementById('signupModal').classList.remove('hidden');
+    }
+    function closeSignupModal() {
+      document.getElementById('signupModal').classList.add('hidden');
+    }
+  </script>
+
+  <script>
+// Backend base URL
+const BASE_URL = 'http://localhost:5000/api';
+
+// Signup form handler
+function handleSignup(event) {
+  event.preventDefault();
+  const fullname = document.querySelector('#signupModal input[placeholder="Full Name"]').value;
+  const email = document.querySelector('#signupModal input[placeholder="Email"]').value;
+  const password = document.querySelector('#signupModal input[placeholder="Password"]').value;
+  const confirmPassword = document.querySelector('#signupModal input[placeholder="Confirm Password"]').value;
+
+  fetch(`${BASE_URL}/auth/signup`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ fullname, email, password, confirmPassword }),
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+    if(data.message === 'User registered successfully') {
+      closeSignupModal();
+    }
+  })
+  .catch(err => alert('Error: ' + err.message));
+}
+
+// Login form handler
+function handleLogin(event) {
+  event.preventDefault();
+  const email = document.querySelector('#loginModal input[placeholder="Email"]').value;
+  const password = document.querySelector('#loginModal input[placeholder="Password"]').value;
+
+  fetch(`${BASE_URL}/auth/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password }),
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.token) {
+      alert('Login successful! Welcome ' + data.fullname);
+      closeLoginModal();
+      // You can save token in localStorage or cookie here if needed
+      localStorage.setItem('token', data.token);
+    } else {
+      alert(data.message || 'Login failed');
+    }
+  })
+  .catch(err => alert('Error: ' + err.message));
+}
+
+// Contact form handler
+function handleContact(event) {
+  event.preventDefault();
+  const form = event.target;
+  const name = form.querySelector('input[placeholder="Your Name"]').value;
+  const email = form.querySelector('input[placeholder="Your Email"]').value;
+  const message = form.querySelector('textarea[placeholder="Your Message"]').value;
+
+  fetch(`${BASE_URL}/contact`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, message }),
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+    if (data.message === 'Message received. We will contact you soon!') {
+      form.reset();
+    }
+  })
+  .catch(err => alert('Error: ' + err.message));
+}
+
+// Attach event listeners when DOM loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Signup button inside signup modal
+  document.querySelector('#signupModal button.bg-pink-500').addEventListener('click', handleSignup);
+
+  // Login button inside login modal
+  document.querySelector('#loginModal button.bg-indigo-600').addEventListener('click', handleLogin);
+
+  // Contact form submit
+  document.querySelector('#contact form').addEventListener('submit', handleContact);
+});
+
+<!-- aapka pura frontend code yahi rahega, bas neeche ye JS add karo: -->
+
+
+  // Signup form submit handler
+  document.querySelector('#signupModal button.bg-pink-500').addEventListener('click', async (e) => {
+    e.preventDefault();
+    const fullname = document.querySelector('#signupModal input[placeholder="Full Name"]').value.trim();
+    const email = document.querySelector('#signupModal input[placeholder="Email"]').value.trim();
+    const password = document.querySelector('#signupModal input[placeholder="Password"]').value;
+    const confirmPassword = document.querySelector('#signupModal input[placeholder="Confirm Password"]').value;
+
+    if (!fullname || !email || !password || !confirmPassword) {
+      alert('Please fill all signup fields');
+      return;
+    }
+
+    try {
+      const res = await fetch('http://localhost:5000/api/auth/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fullname, email, password, confirmPassword })
+      });
+      const data = await res.json();
+      alert(data.message);
+      if (res.ok) closeSignupModal();
+    } catch(err) {
+      alert('Signup failed. Try again.');
+    }
+  });
+
+  // Login form submit handler
+  document.querySelector('#loginModal button.bg-indigo-600').addEventListener('click', async (e) => {
+    e.preventDefault();
+    const email = document.querySelector('#loginModal input[placeholder="Email"]').value.trim();
+    const password = document.querySelector('#loginModal input[placeholder="Password"]').value;
+
+    if (!email || !password) {
+      alert('Please enter email and password');
+      return;
+    }
+
+    try {
+      const res = await fetch('http://localhost:5000/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        alert('Welcome, ' + data.fullname);
+        closeLoginModal();
+      } else {
+        alert(data.message);
+      }
+    } catch(err) {
+      alert('Login failed. Try again.');
+    }
+  });
+
+  // Contact form submit handler
+  document.querySelector('#contact form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = e.target.querySelector('input[placeholder="Your Name"]').value.trim();
+    const email = e.target.querySelector('input[placeholder="Your Email"]').value.trim();
+    const message = e.target.querySelector('textarea').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill all contact fields');
+      return;
+    }
+
+    try {
+      const res = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message })
+      });
+      const data = await res.json();
+      alert(data.message);
+      if (res.ok) {
+        e.target.reset();
+      }
+    } catch(err) {
+      alert('Failed to send message.');
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
